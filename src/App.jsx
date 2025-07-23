@@ -8,7 +8,7 @@ const App = () => {
       <h1>
         My react project <FaSpinner />
       </h1>
-      <p>this is a spinning icon</p>
+      {/* <p>this is a spinning icon</p> */}
     </div>
   );
 };
