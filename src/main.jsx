@@ -9,6 +9,8 @@ import Create from './pages/create.jsx'
 import Login from './pages/login.jsx'
 import Shipment from './pages/shipment.jsx'
 import Track from './pages/track.jsx'
+import ShipmentDetails from './component/shipmentDetails.jsx'
+import ShipmentForm from './component/shipmentForm.jsx'
 
 
 const root = document.getElementById("root");
@@ -23,6 +25,8 @@ ReactDOM.createRoot(root).render(
         <Route path="/login" element={<Login />} />
         <Route path="/shipping" element={<Shipment />} />
         <Route path="/track" element={<Track />} />
+        <Route path="/shipment-details" element={<ShipmentDetails />} />
+        <Route path="/shipment-form" element={<ShipmentForm />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
