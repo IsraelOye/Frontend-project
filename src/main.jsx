@@ -13,6 +13,10 @@ import Footer from './component/footer.jsx'
 import Track from './pages/track.jsx'
 import ShipmentDetails from './component/ShipmentDetails.jsx'
 import ShipmentForm from './component/ShipmentForm.jsx'
+import DashboardLayout from './layouts/dashboardlayout.jsx'
+import DashboardHome from './dashboard/dashboardhome.jsx'
+import Users from './dashboard/users.jsx'
+import Settings from './dashboard/settings.jsx'
 
 
 const root = document.getElementById("root");
@@ -21,6 +25,13 @@ ReactDOM.createRoot(root).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
+        {/* dashboard routes */}
+        <Route path="dashboard" element={<DashboardLayout />}>
+          <Route index element={<DashboardHome />} />
+          <Route path="users" element={<Users />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
+
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />

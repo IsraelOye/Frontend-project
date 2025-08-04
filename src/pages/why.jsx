@@ -40,10 +40,12 @@ const WhyChooseUs = () => {
             WhyChooseUskey={i}
             className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
           >
-            <div className="text-5xl text-gray-900 w-15 mx-auto mb-4">
+            <div className="text-5xl text-orange-600 w-15 mx-auto mb-4">
               {f.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-4">{f.title}</h3>
+            <h3 className="text-xl text-indigo-950 font-semibold mb-4">
+              {f.title}
+            </h3>
             <p className="text-gray-600">{f.desc}</p>
           </div>
         ))}

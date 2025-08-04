@@ -6,7 +6,6 @@ import Services from "./component/services";
 import WhyChooseUs from "./pages/why";
 import Testimonials from "./pages/testimonial";
 import Stats from "./pages/stats";
-import FAQ from "./pages/Faq";
 import HeroSlideshow from "./component/slideshow";
 import Air2 from "./assets/Airplane-2.png";
 import { FaArrowRight, FaArrowUp } from "react-icons/fa6";
@@ -139,49 +138,49 @@ const App = () => {
         </div>
 
         {/* About Section */}
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="px-20 py-16 bg-gradient-to-r from-gray-50 to-gray-100 grid grid-cols-1 lg:grid-cols-2 items-start gap-10"
-        >
-          <div className="mb-20">
-            <p className="text-orange-500 text-lg font-medium mb-6">
-              About Our Company
-            </p>
-            <h3 className="text-4xl font-bold text-indigo-950 leading-12 mb-8">
-              Tind is a leading logistics solutions company, proud to offer
-              unmatched coverage both locally and internationally.
-            </h3>
-            <p className="text-gray-600 leading-7 mb-8">
-              Our mission is to support your business by simplifying your
-              workload. We strive to become Nigeria’s leading courier
-              serviceprovider, meeting your delivery and errand needs promptly
-              and efficiently. Our services cover the pickup and delivery of
-              parcels, documents, items, and pallets of goods with
-              professionalism and care.
-            </p>
-            <p className="text-gray-600 leading-7 mb-5">
-              Tranex Delivery Services eliminates the stress of sending
-              packages. With real-time web and mobile tracking, you can monitor
-              your shipment every step of the way. Our highly trained customer
-              service team ensures every client receives exceptional care, while
-              our tailored logistics solutions are designed to meet your unique
-              needs. With Tranex, we’ve got you covered.
-            </p>
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="px-20 py-16 bg-gradient-to-r from-gray-50 to-gray-200 grid grid-cols-1 lg:grid-cols-2 items-start gap-10"
+          >
+            <div className="mb-20">
+              <p className="text-orange-500 text-lg font-medium mb-6">
+                About Our Company
+              </p>
+              <h3 className="text-4xl font-bold text-indigo-950 leading-12 mb-8">
+                Tind is a leading logistics solutions company, proud to offer
+                unmatched coverage both locally and internationally.
+              </h3>
+              <p className="text-gray-600 leading-7 mb-8">
+                Our mission is to support your business by simplifying your
+                workload. We strive to become Nigeria’s leading courier
+                serviceprovider, meeting your delivery and errand needs promptly
+                and efficiently. Our services cover the pickup and delivery of
+                parcels, documents, items, and pallets of goods with
+                professionalism and care.
+              </p>
+              <p className="text-gray-600 leading-7 mb-5">
+                Tranex Delivery Services eliminates the stress of sending
+                packages. With real-time web and mobile tracking, you can
+                monitor your shipment every step of the way. Our highly trained
+                customer service team ensures every client receives exceptional
+                care, while our tailored logistics solutions are designed to
+                meet your unique needs. With Tranex, we’ve got you covered.
+              </p>
 
-            <Link
-              to="/#"
-              className="bg-orange-500 px-7 py-3 text-white text-sm rounded hover:bg-orange-600 duration-300"
-            >
-              MORE ABOUT US
-            </Link>
-          </div>
-          <div>
-            <img src={Air2} alt="an airplane picture" />
-          </div>
-        </motion.div>
+              <Link
+                to="/#"
+                className="bg-orange-500 px-7 py-3 text-white text-sm rounded hover:bg-orange-600 duration-300"
+              >
+                MORE ABOUT US
+              </Link>
+            </div>
+            <div>
+              <img src={Air2} alt="an airplane picture" />
+            </div>
+          </motion.div>
       </div>
 
       <WhyChooseUs />

@@ -43,7 +43,7 @@ const SideBar = () => {
         <p className="font-medium hover:text-blue-300 duration-300 flex items-center gap-1">
           <CiLogout />
           <button
-          onClick={handleLogout}
+          // onClick={handleLogout}
            className="text-sm">
             Logout
           </button>

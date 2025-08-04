@@ -1,4 +1,4 @@
-const Handler = () => {
+const Users = () => {
   const users = [
     { id: 1, name: "Israel Oyedele", email: "IsraelOyedele@gmail.com", role: "Admin" },
     { id: 2, name: "David beckam", email: "Davidbeckam@gmail.com", role: "Editor" },
@@ -42,4 +42,4 @@ const Handler = () => {
   );
 };
 
-export default Handler;
+export default Users;

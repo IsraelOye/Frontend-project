@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import SideBar from "../components/sidebar";
+import SideBar from "../component/sidebar";
 const DashboardLayout = () => {
   return (
     <div className="flex h-screen">
