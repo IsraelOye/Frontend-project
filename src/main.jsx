@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 // import { createRoot } from 'react-dom/client'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import './index.css'
 import App from './App.jsx'
 import About from './pages/about.jsx'
@@ -23,6 +25,7 @@ const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <StrictMode>
+    <ToastContainer />
     <BrowserRouter>
       <Routes>
         {/* dashboard routes */}
