@@ -50,10 +50,10 @@ const App = () => {
               className="px-3 py-2 placeholder:italic placeholder:text-sm placeholder:text-gray-500 border border-gray-400 rounded w-100 outline-none"
               placeholder="Your Tracking Number"
             />
-            <button className="cursor-pointer bg-orange-500 px-4 py-2 text-white font-medium flex items-center gap-2 hover:bg-orange-600 duration-300">
+            <Link to="/dashboard/track" className="cursor-pointer bg-orange-500 px-4 py-2 text-white font-medium flex items-center gap-2 hover:bg-orange-600 duration-300">
               TRACK
               <FaArrowRight className="text-sm" />
-            </button>
+            </Link>
           </div>
         </motion.section>
 

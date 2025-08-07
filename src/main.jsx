@@ -12,15 +12,13 @@ import Office from './pages/office.jsx';
 import Create from './pages/create.jsx'
 import Login from './pages/login.jsx'
 import Footer from './component/footer.jsx'
-// import Shipment from './pages/shipment.jsx'
-import Track from './pages/track.jsx'
-import ShipmentDetails from './component/ShipmentDetails.jsx'
-import ShipmentForm from './component/ShipmentForm.jsx'
+import Track from './dashboard/track.jsx'
+import Shipment from './dashboard/shipment.jsx';
+import ShipmentHistory from './dashboard/history.jsx';
+// import ShipmentDetails from './component/ShipmentDetails.jsx'
+// import ShipmentForm from './component/ShipmentForm.jsx'
 import DashboardLayout from './layouts/dashboardlayout.jsx'
 import DashboardHome from './dashboard/dashboardhome.jsx'
-import Users from './dashboard/users.jsx'
-import Settings from './dashboard/settings.jsx'
-
 
 const root = document.getElementById("root");
 
@@ -32,8 +30,9 @@ ReactDOM.createRoot(root).render(
         {/* dashboard routes */}
         <Route path="dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardHome />} />
-          <Route path="users" element={<Users />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="shipment" element={<Shipment />} />
+          <Route path="history" element={<ShipmentHistory />} />
+          <Route path="track" element={<Track />} />
         </Route>
 
         <Route path="/" element={<App />} />
@@ -43,9 +42,6 @@ ReactDOM.createRoot(root).render(
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
         <Route path="/footer" element={<Footer />} />
-        <Route path="/track" element={<Track />} />
-        <Route path="/shipment-details" element={<ShipmentDetails />} />
-        <Route path="/shipment-form" element={<ShipmentForm />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

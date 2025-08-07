@@ -37,7 +37,8 @@ const Login = () => {
       }
       
       localStorage.setItem("user", JSON.stringify({email}));
-      localStorage.setItem("token", data.accessToken);
+      localStorage.setItem("token", data.access_token);
+      console.log(localStorage.getItem("token"));
       toast.success("Login successful!");
       navigate("/") 
     } catch (error) {
