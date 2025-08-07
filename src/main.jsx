@@ -8,6 +8,7 @@ import './index.css'
 import App from './App.jsx'
 import About from './pages/about.jsx'
 import FAQ from './pages/Faq.jsx'
+import Office from './pages/office.jsx';
 import Create from './pages/create.jsx'
 import Login from './pages/login.jsx'
 import Footer from './component/footer.jsx'
@@ -38,6 +39,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/office" element={<Office />} />
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
         <Route path="/footer" element={<Footer />} />

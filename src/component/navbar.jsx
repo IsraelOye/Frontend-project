@@ -81,14 +81,20 @@ const Navbar = () => {
           </Link>
 
           <div className="flex space-x-6 text-white text-[15px]">
-            <NavLink className="hover:underline">Dashboard</NavLink>
-            <NavLink to="/#" className="hover:underline">
+            <NavLink to="/dashboard" className="hover:text-orange-400 transition mt-[8px]">Dashboard</NavLink>
+            {/* <NavLink to="/#" className="hover:underline">
               Shipments
-            </NavLink>
-            <NavLink to="/#" className="hover:underline">
+            </NavLink> */}
+            {/* <NavLink to="/#" className="hover:underline">
               Our Blogs
-            </NavLink>
-            <NavLink to="/#" className="hover:underline">
+            </NavLink> */}
+            <NavLink to="/office" className={({ isActive }) =>
+                `px-3 py-2 ${
+                  isActive
+                    ? "text-orange-500 border-b-2 border-orange-500"
+                    : "text-white"
+                } hover:text-orange-400 transition`
+              }>
               Our Offices
             </NavLink>
             <NavLink
@@ -134,7 +140,7 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Link to="/login" className="bg-red-600 px-4 py-2 rounded-md">
+            <Link to="/login" className="bg-red-600 px-4 py-2 text-white hover:bg-red-800 duration-300 rounded-md">
               Sign In/Sign Up
             </Link>
           )}

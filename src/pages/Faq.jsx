@@ -46,7 +46,7 @@ function FAQ() {
   return (
     <div className="pt-30">
         <Navbar />
-      <h2 className="text-4xl font-bold text-center text-indigo-950 mb-10 mt-5">
+      <h2 className="text-4xl font-bold text-center text-indigo-950 mb-10 mt-8">
         Frequently Asked Questions
       </h2>
       <div className="max-w-3xl mx-auto space-y-4 mb-15">

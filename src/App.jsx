@@ -4,6 +4,7 @@ import Footer from "./component/footer";
 import Option from "./component/option";
 import Services from "./component/services";
 import WhyChooseUs from "./pages/why";
+import Office from "./pages/office";
 import Testimonials from "./pages/testimonial";
 import Stats from "./pages/stats";
 import HeroSlideshow from "./component/slideshow";
@@ -29,6 +30,10 @@ const App = () => {
       <div className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700 text-white">
         <HeroSlideshow />
       </div>
+      {/* <Office
+        title="A man"
+        body="qwertyu asdfgh.jkl,tyuiop,zxcvbnm"
+       /> */}
 
       <div className="pt-5">
         {/* Tracking Section */}
@@ -171,7 +176,7 @@ const App = () => {
               </p>
 
               <Link
-                to="/#"
+                to="/about"
                 className="bg-orange-500 px-7 py-3 text-white text-sm rounded hover:bg-orange-600 duration-300"
               >
                 MORE ABOUT US

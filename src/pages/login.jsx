@@ -30,12 +30,12 @@ const Login = () => {
         },
         body: JSON.stringify(loginData)
       })
-
-      if (!response.ok) {
-        throw new Error("Login failed. Please check your credentials.");
-      }
-
       const data = await response.json();
+      console.log(data);
+      if (!response.ok) {
+        throw new Error(data.detail || "Login failed. Please check your credentials.");
+      }
+      
       localStorage.setItem("user", JSON.stringify({email}));
       localStorage.setItem("token", data.accessToken);
       toast.success("Login successful!");

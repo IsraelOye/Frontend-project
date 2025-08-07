@@ -1,11 +1,3 @@
-
-// import { IoAirplaneOutline } from "react-icons/io5";
-// <IoAirplaneOutline />;
-// import { GiFishingBoat } from "react-icons/gi";
-// <GiFishingBoat />;
-// import { MdOutlineLocalShipping } from "react-icons/md";
-// <MdOutlineLocalShipping />;
-
 const Option = (props) => {
     return (
         <div className="flex items-center gap-3">
