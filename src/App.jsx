@@ -50,48 +50,24 @@ const App = () => {
               className="px-3 py-2 placeholder:italic placeholder:text-sm placeholder:text-gray-500 border border-gray-400 rounded w-100 outline-none"
               placeholder="Your Tracking Number"
             />
-            <Link to="/dashboard/track" className="cursor-pointer bg-orange-500 px-4 py-2 text-white font-medium flex items-center gap-2 hover:bg-orange-600 duration-300">
+            <Link
+              to="/dashboard/track"
+              className="cursor-pointer bg-orange-500 px-4 py-2 text-white font-medium flex items-center gap-2 hover:bg-orange-600 duration-300"
+            >
               TRACK
               <FaArrowRight className="text-sm" />
             </Link>
           </div>
         </motion.section>
 
-        {/* Contact Options */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="grid grid-cols-3 bg-white py-15 px-20 shadow-md"
-        >
-          <Option
-            icon={<RiCustomerService2Line />}
-            first="Call Us Anytime"
-            second="Customer Care:(234)8159879973"
-            third="Business:(234)8097872172"
-          />
-          <Option
-            icon={<FaRegClock />}
-            first="Sat - Sun CLOSED"
-            second="Mon - Fri 8.00 - 17.00"
-          />
-          <Option
-            icon={<IoLocationOutline />}
-            first="Nigeria"
-            second="129, Yaba Road,"
-            third="Yaba Lagos"
-          />
-        </motion.div>
-
         {/* Services Section */}
-        <div className="px-20 my-30 bg-gray-50">
+        <div className="px-20 bg-gray-50">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
-            className="text-orange-500 text-lg font-medium text-center py-3"
+            className="text-orange-500 text-4xl font-medium text-center py-10"
           >
             Our Services
           </motion.p>
@@ -100,7 +76,7 @@ const App = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: false }}
-            className="text-4xl font-bold text-indigo-950 text-center"
+            className="text-3xl font-bold text-indigo-950 text-center"
           >
             Our Core Service Offerings
           </motion.h3>
@@ -143,52 +119,80 @@ const App = () => {
         </div>
 
         {/* About Section */}
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: false, amount: 0.3 }}
-            className="px-20 py-16 bg-gradient-to-r from-gray-50 to-gray-200 grid grid-cols-1 lg:grid-cols-2 items-start gap-10"
-          >
-            <div className="mb-20">
-              <p className="text-orange-500 text-lg font-medium mb-6">
-                About Our Company
-              </p>
-              <h3 className="text-4xl font-bold text-indigo-950 leading-12 mb-8">
-                Tind is a leading logistics solutions company, proud to offer
-                unmatched coverage both locally and internationally.
-              </h3>
-              <p className="text-gray-600 leading-7 mb-8">
-                Our mission is to support your business by simplifying your
-                workload. We strive to become Nigeria’s leading courier
-                serviceprovider, meeting your delivery and errand needs promptly
-                and efficiently. Our services cover the pickup and delivery of
-                parcels, documents, items, and pallets of goods with
-                professionalism and care.
-              </p>
-              <p className="text-gray-600 leading-7 mb-5">
-                Tranex Delivery Services eliminates the stress of sending
-                packages. With real-time web and mobile tracking, you can
-                monitor your shipment every step of the way. Our highly trained
-                customer service team ensures every client receives exceptional
-                care, while our tailored logistics solutions are designed to
-                meet your unique needs. With Tranex, we’ve got you covered.
-              </p>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="px-20 py-16 bg-gradient-to-r from-gray-50 to-gray-200 grid grid-cols-1 lg:grid-cols-2 items-start gap-10"
+        >
+          <div className="mb-20">
+            <p className="text-orange-500 text-lg font-medium mb-6">
+              About Our Company
+            </p>
+            <h3 className="text-4xl font-bold text-indigo-950 leading-12 mb-8">
+              Tind is a leading logistics solutions company, proud to offer
+              unmatched coverage both locally and internationally.
+            </h3>
+            <p className="text-gray-600 leading-7 mb-8">
+              Our mission is to support your business by simplifying your
+              workload. We strive to become Nigeria’s leading courier
+              serviceprovider, meeting your delivery and errand needs promptly
+              and efficiently. Our services cover the pickup and delivery of
+              parcels, documents, items, and pallets of goods with
+              professionalism and care.
+            </p>
+            <p className="text-gray-600 leading-7 mb-5">
+              Tranex Delivery Services eliminates the stress of sending
+              packages. With real-time web and mobile tracking, you can monitor
+              your shipment every step of the way. Our highly trained customer
+              service team ensures every client receives exceptional care, while
+              our tailored logistics solutions are designed to meet your unique
+              needs. With Tranex, we’ve got you covered.
+            </p>
 
-              <Link
-                to="/about"
-                className="bg-orange-500 px-7 py-3 text-white text-sm rounded hover:bg-orange-600 duration-300"
-              >
-                MORE ABOUT US
-              </Link>
-            </div>
-            <div>
-              <img src={Air2} alt="an airplane picture" />
-            </div>
-          </motion.div>
+            <Link
+              to="/about"
+              className="bg-orange-500 px-7 py-3 text-white text-sm rounded hover:bg-orange-600 duration-300"
+            >
+              MORE ABOUT US
+            </Link>
+          </div>
+          <div>
+            <img src={Air2} alt="an airplane picture" />
+          </div>
+        </motion.div>
       </div>
 
       <WhyChooseUs />
+
+      {/* Contact Options */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.3 }}
+        className="grid grid-cols-3 bg-white py-15 px-20 shadow-md"
+      >
+        <Option
+          icon={<RiCustomerService2Line />}
+          first="Call Us Anytime"
+          second="Customer Care:(234)8159879973"
+          third="Business:(234)8097872172"
+        />
+        <Option
+          icon={<FaRegClock />}
+          first="Sat - Sun CLOSED"
+          second="Mon - Fri 8.00 - 17.00"
+        />
+        <Option
+          icon={<IoLocationOutline />}
+          first="Nigeria"
+          second="129, Yaba Road,"
+          third="Yaba Lagos"
+        />
+      </motion.div>
+      
       <Testimonials />
       <Stats />
 

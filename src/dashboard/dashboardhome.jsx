@@ -57,7 +57,7 @@ const DashboardHome = () => {
   }
 
   return (
-    <div className="bg-gray-200 min-h-screen pt-2">
+    <div className="bg-gray-50 min-h-screen pt-2">
       <div className="max-w-5xl mx-auto px-10">
         <h1 className="text-green-900 text-2xl my-5 font-medium flex items-center gap-4">
           My Profile <hr className="flex-1 text-gray-300" />

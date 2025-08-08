@@ -33,7 +33,7 @@ const Login = () => {
       const data = await response.json();
       console.log(data);
       if (!response.ok) {
-        throw new Error(data.detail || "Login failed. Please check your credentials.");
+        throw new Error("Login failed. Please check your credentials.");
       }
       
       localStorage.setItem("user", JSON.stringify({email}));
@@ -60,8 +60,12 @@ const Login = () => {
       {/* Centered Login Box */}
       <div className="relative flex justify-center items-center min-h-screen backdrop-blur-sm bg-white/20">
         <div className="rounded-lg shadow-lg w-full max-w-lg p-8">
-          <h1 className="text-4xl font-medium text-center mb-1">Login</h1>
-          <p className=" font-medium text-sm text-center mb-12">Hi, Welcome back👋</p>
+          <h1 className="text-4xl font-medium text-center mb-1 text-gray-900">
+            Login
+          </h1>
+          <p className=" font-medium text-sm text-center mb-12 text-gray-900">
+            Hi, Welcome back👋
+          </p>
 
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
@@ -98,15 +102,15 @@ const Login = () => {
               </div>
             </div>
 
-            {/* <div className="flex justify-between items-center my-4">
+            <div className="flex justify-between items-center my-4">
               <label className="flex items-center gap-2 text-sm font-medium">
                 <input type="checkbox" />
                 Remember Me
               </label>
-              <Link className="text-indigo-700 text-sm font-medium">
+              <Link className="text-gray-900 text-sm font-medium">
                 Forgot Password?
               </Link>
-            </div> */}
+            </div>
 
             <button
               type="submit"
@@ -118,7 +122,7 @@ const Login = () => {
 
           <p className="text-center text-sm mt-5">
             Not registered yet?{" "}
-            <Link to="/create" className="text-indigo-700 font-medium">
+            <Link to="/create" className="text-gray-900 font-medium">
               Create an account
             </Link>
           </p>

@@ -29,7 +29,7 @@ const offices = [
   },
   {
     title: "Ogba",
-    body: "3A, Ijayi Road, Beside Spootom Link Services, Aguda Ogba, Lagos",
+    body: "3A, Ajayi Road, Beside Spootom Link Services, Aguda Ogba, Lagos",
     phone: "+234 814 314 6905",
   },
 ];

@@ -8,6 +8,7 @@ import './index.css'
 import App from './App.jsx'
 import About from './pages/about.jsx'
 import FAQ from './pages/Faq.jsx'
+import Blog from './pages/blog.jsx';
 import Office from './pages/office.jsx';
 import Create from './pages/create.jsx'
 import Login from './pages/login.jsx'
@@ -42,6 +43,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
