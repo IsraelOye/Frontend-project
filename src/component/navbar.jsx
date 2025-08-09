@@ -59,9 +59,13 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center text-gray-400 space-x-6">
-              <Link>
+              <a
+                href="https://www.facebook.com/profile.php?id=100075381446900"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF />
-              </Link>
+              </a>
               <Link>
                 <FaXTwitter />
               </Link>

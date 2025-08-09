@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="flex justify-between mb-8">
           <div>
             <h2 className="mb-6 font-bold text-xl">COMPANY</h2>
-            <div className="leading-8 text-gray-400">
-              <p>About Us</p>
-              <p>Company</p>
-              <p>Privacy Policy</p>
+            <div className="leading-8 text-gray-400 grid">
+              <Link to="/about">About Us</Link>
+              <Link>Company</Link>
+              <Link>Privacy Policy</Link>
             </div>
           </div>
 
@@ -24,9 +24,14 @@ const Footer = () => {
           <div>
             <h2 className="mb-6 font-bold text-xl">CONNECT WITH US</h2>
             <div className="flex items-center text-gray-400 space-x-6">
-              <Link>
+              <a
+                href="https://www.facebook.com/profile.php?id=100075381446900"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF />
-              </Link>
+              </a>
+
               <Link>
                 <FaXTwitter />
               </Link>
