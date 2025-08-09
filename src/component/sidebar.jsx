@@ -97,7 +97,7 @@ const SideBar = ({ isCollapsed, setIsCollapsed }) => {
         ${isCollapsed ? "w-16" : "w-64"} `}
       >
         {/* Logo */}
-        <div className="flex items-end justify-between p-4">
+        <div className="flex items-center justify-between p-4">
           {!isCollapsed && (
             <span className="font-bold text-lg">My Dashboard</span>
           )}
