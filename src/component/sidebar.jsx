@@ -72,8 +72,6 @@
 
 // export default SideBar;
 
-
-
 // SideBar.jsx
 // import { Link } from "react-router-dom";
 // import { FiHome, FiMapPin, FiMenu, FiX } from "react-icons/fi";
@@ -182,7 +180,6 @@
 // );
 
 // export default SideBar;
-
 
 import { Link } from "react-router-dom";
 import { FiHome, FiMapPin, FiX } from "react-icons/fi";
