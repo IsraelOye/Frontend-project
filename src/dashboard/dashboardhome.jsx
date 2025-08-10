@@ -73,7 +73,6 @@
 
 import { useState, useEffect } from "react";
 // import { toast } from "react-toastify";
-import { LuPencilLine } from "react-icons/lu";
 import { FiUser, FiMail, FiCalendar, FiEdit2 } from "react-icons/fi";
 
 const DashboardHome = () => {
@@ -95,7 +94,7 @@ const DashboardHome = () => {
         }
       );
       if (!response.ok) {
-        throw new Error("Failed to fetch profile. Please log in again");
+        throw new Error("Failed to fetch profile. Please log in");
       }
 
       const data = await response.json();
@@ -143,12 +142,11 @@ const DashboardHome = () => {
               Error Loading Profile
             </p>
             <p className="text-red-600 text-sm">{error}</p>
-            <button
-              onClick={fetchprofile}
-              className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+            <p
+              className="mt-4 px-4 py-2 text-red-600 font-medium rounded-lg"
             >
               Try Again
-            </button>
+            </p>
           </div>
         </div>
       </div>
@@ -169,15 +167,14 @@ const DashboardHome = () => {
   return (
     <div className="bg-gray-50 min-h-screen pt-2">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10">
-        <h1 className="text-green-900 text-xl sm:text-2xl my-4 sm:my-5 font-medium flex items-center gap-4">
+        <h1 className="text-gray-800 text-xl sm:text-2xl my-4 sm:my-5 font-medium flex items-center gap-4">
           My Profile
-          <hr className="flex-1 border-gray-300" />
         </h1>
 
         {/* Profile Card */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
           {/* Header Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 sm:px-8 py-6 sm:py-8">
+          <div className="bg-indigo-800 px-6 sm:px-8 py-6 sm:py-8">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
               {/* Avatar */}
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center shadow-lg">
@@ -195,12 +192,6 @@ const DashboardHome = () => {
                   Member since {formatDate(user.created_at)}
                 </p>
               </div>
-
-              {/* Edit Button */}
-              <button className="bg-white/20 hover:bg-white/30 transition-colors px-4 py-2 rounded-lg flex items-center gap-2 text-white text-sm">
-                <FiEdit2 size={16} />
-                Edit Profile
-              </button>
             </div>
           </div>
 
@@ -300,45 +291,6 @@ const DashboardHome = () => {
                     </div>
                   )}
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Actions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <LuPencilLine className="text-blue-600" size={20} />
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-800">Edit Profile</h4>
-                <p className="text-sm text-gray-600">Update your information</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <FiMail className="text-green-600" size={20} />
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-800">Change Email</h4>
-                <p className="text-sm text-gray-600">Update email address</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow cursor-pointer sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <FiCalendar className="text-purple-600" size={20} />
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-800">View History</h4>
-                <p className="text-sm text-gray-600">Check activity log</p>
               </div>
             </div>
           </div>
