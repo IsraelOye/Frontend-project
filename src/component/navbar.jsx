@@ -208,7 +208,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -304,7 +304,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-6 text-white text-[15px]">
             <NavLink
-              to="/dashboard/shipment"
+              to="/dashboard"
               className="hover:text-orange-400 transition mt-[8px]"
             >
               Dashboard
@@ -432,7 +432,7 @@ const Navbar = () => {
           {/* Mobile navigation links */}
           <div className="px-4 py-3 space-y-1">
             <NavLink
-              to="/dashboard/shipment"
+              to="/dashboard"
               onClick={closeMobileMenu}
               className="block py-2 text-white hover:text-orange-400 transition"
             >
