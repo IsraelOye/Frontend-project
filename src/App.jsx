@@ -360,12 +360,12 @@ const App = () => {
               professionalism and care.
             </p>
             <p className="text-gray-600 text-sm md:text-base leading-6 md:leading-7 mb-4 md:mb-5">
-              Tranex Delivery Services eliminates the stress of sending
+              Tind Delivery Services eliminates the stress of sending
               packages. With real-time web and mobile tracking, you can monitor
               your shipment every step of the way. Our highly trained customer
               service team ensures every client receives exceptional care, while
               our tailored logistics solutions are designed to meet your unique
-              needs. With Tranex, we've got you covered.
+              needs. With Tind, we've got you covered.
             </p>
 
             <Link

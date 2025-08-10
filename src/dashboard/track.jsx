@@ -239,10 +239,10 @@ const TrackShipment = () => {
   };
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-      <div className="mb-6 sm:mb-8">
+    <div className="px-4 sm:px-8 lg:px-10 max-w-3xl mx-auto">
+      <div className="mb-6 sm:mb-8 mt-5">
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2 text-gray-900 flex items-center gap-3">
-          <FiPackage className="text-blue-600" />
+          {/* <FiPackage className="text-blue-600" /> */}
           Track Your Shipment
         </h2>
         <p className="text-gray-600 text-sm sm:text-base">
@@ -259,14 +259,14 @@ const TrackShipment = () => {
               value={shipmentId}
               onChange={(e) => setShipmentId(e.target.value)}
               placeholder="Enter tracking ID"
-              className="border border-gray-300 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg w-full outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:italic placeholder:text-sm placeholder:text-gray-500 text-sm sm:text-base transition-all"
+              className="border border-gray-300 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg w-full outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:italic placeholder:text-sm placeholder:text-gray-500 text-sm sm:text-base transition-all"
               disabled={loading}
             />
           </div>
           <button
             type="submit"
             // disabled={loading || !shipmentId.trim()}
-            className="bg-blue-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base font-medium cursor-pointer"
+            className="bg-blue-600 w-33 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base font-medium cursor-pointer"
           >
             {loading ? (
               <>
