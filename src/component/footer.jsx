@@ -75,7 +75,7 @@ const Footer = () => {
             >
               About Us
             </Link>
-            <Link className="hover:text-white transition-colors duration-300">
+            <Link to="/office" className="hover:text-white transition-colors duration-300">
               Company
             </Link>
             <Link className="hover:text-white transition-colors duration-300">
