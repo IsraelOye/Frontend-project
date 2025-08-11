@@ -46,7 +46,7 @@ const ShipmentHistory = () => {
 
   return (
     <div className="min-h-screen px-4 py-6 bg-gray-50">
-      <h1 className="text-2xl font-bold mb-4 text-green-800">
+      <h1 className="text-2xl font-bold mb-4 text-blue-800">
         Shipment History
       </h1>
 
