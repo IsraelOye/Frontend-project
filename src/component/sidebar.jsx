@@ -205,7 +205,7 @@ const SideBar = ({
       {/* Sidebar */}
       <aside
         className={`
-          fixed md:static z-50 bg-green-900 text-white h-full transition-all duration-300 flex flex-col
+          fixed md:static z-50 bg-blue-900 text-white h-full transition-all duration-300 flex flex-col
           ${
             // Mobile: slide in/out from left
             isMobileOpen
@@ -284,12 +284,12 @@ const SideBar = ({
 
         {/* Footer (optional) */}
         <div
-          className={`p-4 border-t border-green-800 ${
+          className={`p-4 border-t border-blue-800 ${
             isCollapsed ? "md:px-2" : ""
           }`}
         >
           <div
-            className={`text-xs text-green-200 transition-all duration-300 ${
+            className={`text-xs text-blue-200 transition-all duration-300 ${
               isCollapsed
                 ? "md:opacity-0 md:w-0 md:overflow-hidden"
                 : "opacity-100"
@@ -299,7 +299,7 @@ const SideBar = ({
           </div>
           {isCollapsed && (
             <div className="hidden md:block text-center">
-              <div className="w-2 h-2 bg-green-400 rounded-full mx-auto"></div>
+              <div className="w-2 h-2 bg-blue-400 rounded-full mx-auto"></div>
             </div>
           )}
         </div>
@@ -314,7 +314,7 @@ const NavItem = ({ to, icon, label, collapsed, onMobileClick }) => (
     onClick={onMobileClick} // Close mobile sidebar when navigating
     className={`
       group flex items-center gap-3 p-3 rounded-lg transition-all duration-200
-      hover:bg-green-800 active:bg-green-700
+      hover:bg-blue-800 active:bg-blue-700
       ${collapsed ? "md:justify-center md:px-2" : ""}
     `}
     title={collapsed ? label : ""} // Tooltip for collapsed state

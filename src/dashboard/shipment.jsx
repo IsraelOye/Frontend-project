@@ -91,15 +91,15 @@ const CreateShipment = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-10">
-      <h1 className="text-2xl font-bold mb-6 text-green-900">
+      <h1 className="text-2xl font-bold mb-6 text-blue-900">
         Create New Shipment
       </h1>
 
       {successMessage && (
-        <div className="bg-green-100 text-green-800 px-4 py-3 rounded mb-4">
+        <div className="bg-green-100 text-blue-800 px-4 py-3 rounded mb-4">
           {successMessage}
           {trackingId && (
-            <p className="mt-2 text-sm text-green-700">
+            <p className="mt-2 text-sm text-blue-700">
               <strong>Tracking ID:</strong> {trackingId}
             </p>
           )}
@@ -253,7 +253,7 @@ const CreateShipment = () => {
         <button
           type="submit"
           disabled={loading}
-          className="bg-green-600 text-white font-bold py-2 px-4 rounded mt-4"
+          className="bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4"
         >
           {loading ? "Creating shipment..." : "Create Shipment"}
         </button>

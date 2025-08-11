@@ -78,7 +78,7 @@ const Footer = () => {
             <Link to="/office" className="hover:text-white transition-colors duration-300">
               Company
             </Link>
-            <Link className="hover:text-white transition-colors duration-300">
+            <Link to="/privacy" className="hover:text-white transition-colors duration-300">
               Privacy Policy
             </Link>
           </div>
