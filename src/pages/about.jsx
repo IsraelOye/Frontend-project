@@ -114,7 +114,7 @@ const About = () => {
               needs. With Tind, we've got you covered.
             </p>
           </div>
-          <div className="order-1 lg:order-2 flex justify-center">
+          <div className="order-2 lg:order-2 flex justify-center">
             <img
               src={Air2}
               alt="an airplane picture"
