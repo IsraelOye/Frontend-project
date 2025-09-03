@@ -180,7 +180,7 @@ const Login = () => {
       localStorage.setItem("token", data.access_token);
       console.log(localStorage.getItem("token"));
       toast.success("Login successful!");
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Error:", error);
       toast.error(`Error: ${error.message}`);

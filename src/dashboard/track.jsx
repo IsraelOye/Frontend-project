@@ -1,92 +1,3 @@
-// import { useState } from "react";
-
-// const TrackShipment = () => {
-//   const [shipmentId, setShipmentId] = useState("");
-//   const [shipment, setShipment] = useState(null);
-//   const [error, setError] = useState("");
-//   const [loading, setLoading] = useState(false)
-
-//   const handleTrack = async () => {
-//     if (!shipmentId) return;
-
-//     setLoading(true);
-
-//     try {
-//       const res = await fetch(
-//         `https://electronic-gertrudis-chanel-debb-bad97784.koyeb.app/dispatches/${shipmentId}`
-//       );
-
-//       if (!res.ok) {
-//         throw new Error("Shipment not found");
-//       }
-
-//       const data = await res.json();
-//       setShipment(data);
-//       setError(null);
-//     } catch (error) {
-//       setError(error.message);
-//       setShipment(null);
-//     } finally {
-//       setLoading(false)
-//     }
-//   };
-
-//   return (
-//     <div className="px-5">
-//       <h2 className="text-xl font-semibold mb-4 mt-2">Track Shipment</h2>
-//       {error && (
-//         <div className="bg-red-100 text-red-800 px-4 py-3 rounded mb-4">
-//           {error}
-//         </div>
-//       )}
-//       <div className="flex items-center gap-4 mb-4">
-//         {error}
-//         <input
-//           type="text"
-//           value={shipmentId}
-//           onChange={(e) => setShipmentId(e.target.value)}
-//           placeholder="Enter shipment ID"
-//           className="border px-2 py-2 rounded w-70 outline-gray-500 placeholder:italic placeholder:text-sm placeholder:text-gray-700"
-//         />
-//         <button
-//           type="submit"
-//           onClick={handleTrack}
-//           disabled={loading}
-//           className="bg-blue-600 text-white w-25 py-2 rounded hover:bg-blue-700 cursor-pointer"
-//         >
-//           {loading ? "Tracking..." : "Track"}
-//         </button>
-//       </div>
-
-//       {error && <p className="text-red-600">{error}</p>}
-
-//       {shipment && (
-//         <div className="borde px-4 py-2 rounded bg-white shadow max-w-3xl">
-//           <p>
-//             <strong>Recipient:</strong>{" "}
-//             {shipment?.new_recipient?.full_name || "Not available"}
-//           </p>
-//           <p>
-//             <strong>Content:</strong> {shipment.content}
-//           </p>
-//           <p>
-//             <strong>Weight:</strong> {shipment.weight}kg
-//           </p>
-//           <p>
-//             <strong>Status:</strong> {shipment.status || "Pending"}
-//           </p>
-//           <p>
-//             <strong>Delivery Date:</strong> {shipment.delievery_date}
-//           </p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default TrackShipment;
-
-
 import { useState } from "react";
 import {
   FiSearch,
@@ -102,58 +13,17 @@ const TrackShipment = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // const handleTrack = async (e) => {
-  //   e.preventDefault(); // Prevent form submission if used in a form
-
-  //   if (!shipmentId.trim()) {
-  //     setError("Please enter a shipment ID");
-  //     return;
-  //   }
-
-  //   setLoading(true);
-  //   setError(""); // Clear previous errors
-  //   setShipment(null); // Clear previous results
-
-  //   try {
-  //     const res = await fetch(
-  //       `https://electronic-gertrudis-chanel-debb-bad97784.koyeb.app/dispatches/${shipmentId.trim()}`
-  //     );
-
-  //     if (!res.ok) {
-  //       if (res.status === 404) {
-  //         throw new Error(
-  //           "Shipment not found. Please check your tracking ID and try again."
-  //         );
-  //       } else if (res.status === 500) {
-  //         throw new Error("Server error. Please try again later.");
-  //       } else {
-  //         throw new Error(`Error: ${res.status}. Please try again.`);
-  //       }
-  //     }
-
-  //     const data = await res.json();
-  //     setShipment(data);
-  //     setError("");
-  //   } catch (error) {
-  //     console.error("Tracking error:", error);
-  //     setError(error.message);
-  //     setShipment(null);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   const handleTrack = async (e) => {
     e.preventDefault();
 
-    // 1️⃣ Check if user is logged in
+    // 1️. Check if user is logged in
     const token = localStorage.getItem("token"); // or whatever key you store your token under
     if (!token) {
       setError("You must be logged in to track a shipment.");
       return;
     }
 
-    // 2️⃣ Check if tracking ID was entered
+    // 2️. Check if tracking ID was entered
     if (!shipmentId.trim()) {
       setError("Please enter a shipment ID.");
       return;
@@ -173,7 +43,7 @@ const TrackShipment = () => {
         }
       );
 
-      // 3️⃣ Handle invalid tracking IDs or server errors
+      // 3️. Handle invalid tracking IDs or server errors
       if (!res.ok) {
         if (res.status === 404) {
           throw new Error(
@@ -190,7 +60,7 @@ const TrackShipment = () => {
 
       const data = await res.json();
 
-      // 4️⃣ Extra validation: check if API returned a valid shipment object
+      // 4️. Extra validation: check if API returned a valid shipment object
       if (!data || !data.status) {
         throw new Error("Invalid tracking ID. No shipment details found.");
       }
@@ -266,7 +136,14 @@ const TrackShipment = () => {
           <button
             type="submit"
             // disabled={loading || !shipmentId.trim()}
-            className="bg-blue-600 w-33 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base font-medium cursor-pointer"
+            // className={`w-33 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-1 text-sm sm:text-base font-medium transition-colors 
+            //   ${
+            //     loading || !shipmentId.trim()
+            //       ? "bg-gray-400 cursor-not-allowed" // 🔒 Disabled state
+            //       : "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+            //   } // ✅ Active state
+            // `}
+            className="bg-blue-600 w-33 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-1 text-sm sm:text-base font-medium cursor-pointer"
           >
             {loading ? (
               <>

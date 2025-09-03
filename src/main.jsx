@@ -17,8 +17,6 @@ import Footer from './component/footer.jsx'
 import Track from './dashboard/track.jsx'
 import Shipment from './dashboard/shipment.jsx';
 import ShipmentHistory from './dashboard/history.jsx';
-// import ShipmentDetails from './component/ShipmentDetails.jsx'
-// import ShipmentForm from './component/ShipmentForm.jsx'
 import DashboardLayout from './layouts/dashboardlayout.jsx'
 import DashboardHome from './dashboard/dashboardhome.jsx'
 

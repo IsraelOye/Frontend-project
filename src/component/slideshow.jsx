@@ -1,55 +1,3 @@
-// import Air from "../assets/Airplane.png";
-// import Ship from "../assets/ship.jpg";
-// import Van from "../assets/van.jpg";
-// import { useState, useEffect } from "react";
-
-// function HeroSlideshow() {
-//   // 1. List of images for the slideshow
-//   const slides = [Air, Ship, Van];
-
-//   // 2. Track the current image index
-//   const [current, setCurrent] = useState(0);
-
-//   // 3. Change image automatically every 4 seconds
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrent((prev) => (prev + 1) % slides.length); // loop back to start
-//     }, 4000);
-//     return () => clearInterval(interval); // cleanup
-//   }, []);
-
-//   return (
-//     <div className="relative w-full h-[90vh] overflow-hidden mt-33">
-//       {/* 4. Loop through images and show only the active one */}
-//       {slides.map((slide, index) => (
-//         <img
-//           key={index}
-//           src={slide}
-//           alt={`slide-${index}`}
-//           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-//             index === current ? "opacity-100" : "opacity-0"
-//           }`}
-//         />
-//       ))}
-
-//       {/* 5. Optional overlay for better text visibility */}
-//       <div className="absolute inset-0 bg-black/50"></div>
-
-//       {/* 6. Text on top of slideshow */}
-//       <div className="absolute inset-0 flex flex-col items-right justify-center text-white px-15">
-//         <h1 className="text-7xl font-bold mb-4 leading-20">Secure And Trusted <span className="text-orange-700">Logistics</span> <br />Services!</h1>
-//         <p className="text-lg font-medium">
-//           Delivering excellence across air, sea, and land.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default HeroSlideshow;
-
-
-
 import Air from "../assets/Airplane.png";
 import Ship from "../assets/ship.jpg";
 import Van from "../assets/van.jpg";
@@ -66,7 +14,7 @@ function HeroSlideshow() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length); // loop back to start
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval); // cleanup
   }, []);
 

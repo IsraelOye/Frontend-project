@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
@@ -34,7 +34,7 @@ const Privacy = () => {
         className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700 text-white pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 md:pb-16 lg:pb-20"
       >
         <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 md:mb-6">
             Privacy Policy
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-indigo-200 max-w-3xl mx-auto">
